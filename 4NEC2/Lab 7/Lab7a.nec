@@ -1,0 +1,23 @@
+CM Example 1 :	Dipole in free space 	
+CM See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CE
+SY freq = 860	'Frequency [MHz]
+SY c = 299792458	'Speed of Light [m/s]
+SY lambda = c/freq/1e6	'WaveLength [m]
+SY seg = 21	'Number of Segments (odd)
+SY radius = 1e-03*lambda	'Radius [m]
+SY dip_length = lambda/2	'Dipolo length [m]
+SY d = 10*lambda	'Distance between the dipoles
+GW	1	seg	0	0	-dip_length /2	0	0	dip_length /2	radius	'Dipole1
+GW	2	seg	d	0	-dip_length /2	d	0	dip_length /2	radius	'Dipole2
+GE	0
+GN	-1
+EK
+EX	6	1	0.5*seg+0.5	0	1	0	0	'I1
+EX	6	2	0.5*seg+0.5	0	1	0	0	'I2
+FR	0	0	0	0	freq	0
+EN

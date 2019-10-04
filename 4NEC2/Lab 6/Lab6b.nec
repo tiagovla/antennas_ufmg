@@ -1,0 +1,21 @@
+CM Example 1 :	Dipole in free space 	
+CM See GetStarted.txt
+CE
+SY f = 300	'Frequency [MHz]
+SY c = 299792458	'Speed of light [m/s]
+SY lmbda = c/f/1e6	'WaveLength [m]
+SY d = 0.01	'Distance between the wires of the TL [m]
+SY a = 8.1536e-04	'Radius of the wire [m]
+SY L = lmbda	'Length of the TL [m]
+SY h = 0.5*lmbda	'Height of the Antenna [m]
+GW	1	31	0	0	-h/2	0	0	h/2	a
+GW	2	31	d	0	-h/2	d	0	h/2	a
+GW	3	4	0	0	h/2	d	0	h/2	a
+GW	4	4	0	0	-h/2	d	0	-h/2	a
+GE	0
+
+GN	-1
+EK
+EX	0	1	16	0	1	0	0
+FR	0	0	0	0	300	0
+EN
