@@ -1,0 +1,48 @@
+CM
+CM yagioptimizer model, optimized with nec.opt by Tiago
+CM
+CMD--OPT -n4 -a10 -r restart.log -C 50
+CMD--OPT -s(824,17.5,5) -t(11.0,11.0) --swr-target=1.45 --f2b-target=15
+CMD--OPT --target-function= #####
+CMD--EVAL -s (824,17.5,5) -n4 -a10 -C 50
+CM
+CE
+
+SY RAD=#####
+SY FRAD=#####
+SY DIPOLE_CENTER=#####' 0.0025, 0.01
+SY DIPOLE_WIDTH=#####' 0.10, 0.2
+SY REF_Z=#####' 0.1, 0.25
+SY EL1_Z=#####' 0.1, 0.25
+SY EL2_Z=#####' 0.1, 0.25
+SY EL3_Z=#####' 0.1, 0.25
+SY EL4_Z=#####' 0.1, 0.25
+SY EL5_Z=#####' 0.08, 0.2
+SY REF_X=#####' 0.03, 0.2
+SY EL1_X=#####' 0.03, 0.2
+SY EL2_X_DIFF=#####' 0.05, 0.3
+SY EL2_X=EL1_X+EL2_X_DIFF
+SY EL3_X_DIFF=#####' 0.05, 0.3
+SY EL3_X=EL2_X+EL3_X_DIFF
+SY EL4_X_DIFF=#####' 0.05, 0.3
+SY EL4_X=EL3_X+EL4_X_DIFF
+SY EL5_X_DIFF=#####' 0.05, 0.3
+SY EL5_X=EL4_X+EL5_X_DIFF
+SY COND=2e+07
+
+GW 1 1 0 -DIPOLE_CENTER/2 0 0 DIPOLE_CENTER/2 0 FRAD' #00f
+GW 3 4 0 -DIPOLE_WIDTH/2 0 0 -DIPOLE_CENTER/2 0 RAD' #f40
+GW 4 4 0 DIPOLE_WIDTH/2 0 0 DIPOLE_CENTER/2 0 RAD' #f40
+GW 11 9 -REF_X -REF_Z/2 0 -REF_X REF_Z/2 0 RAD
+GW 12 7 EL1_X -EL1_Z/2 0 EL1_X EL1_Z/2 0 RAD
+GW 13 7 EL2_X -EL2_Z/2 0 EL2_X EL2_Z/2 0 RAD
+GW 14 7 EL3_X -EL3_Z/2 0 EL3_X EL3_Z/2 0 RAD
+GW 15 7 EL4_X -EL4_Z/2 0 EL4_X EL4_Z/2 0 RAD
+GE 0
+LD 5 0 0 0 COND
+GN -1
+EK
+EX 0 1 1 0 1 0 0
+FR 0 5 0 0 824 17.5
+RP 0 1 73 1510 90 0 1 5 0 0
+EN
