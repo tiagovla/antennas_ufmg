@@ -17,7 +17,6 @@ SY EL1_Z=#####' 0.1, 0.25
 SY EL2_Z=#####' 0.1, 0.25
 SY EL3_Z=#####' 0.1, 0.25
 SY EL4_Z=#####' 0.1, 0.25
-SY EL5_Z=#####' 0.08, 0.2
 SY REF_X=#####' 0.03, 0.2
 SY EL1_X=#####' 0.03, 0.2
 SY EL2_X_DIFF=#####' 0.05, 0.3
@@ -26,8 +25,6 @@ SY EL3_X_DIFF=#####' 0.05, 0.3
 SY EL3_X=EL2_X+EL3_X_DIFF
 SY EL4_X_DIFF=#####' 0.05, 0.3
 SY EL4_X=EL3_X+EL4_X_DIFF
-SY EL5_X_DIFF=#####' 0.05, 0.3
-SY EL5_X=EL4_X+EL5_X_DIFF
 SY COND=2e+07
 
 GW 1 1 0 -DIPOLE_CENTER/2 0 0 DIPOLE_CENTER/2 0 FRAD' #00f

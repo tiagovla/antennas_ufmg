@@ -30,12 +30,20 @@ Evaluate command:
 After evaluation, an HTML file is created. It contains:
 
 ### The numerical results:
-![](https://i.imgur.com/lgXT0zS.png)
+![](https://i.imgur.com/BOtdcKt.png)
 
+The following gradation can be made for the AGT (Average-Gain-Test) column:
+```
+> 0.95 and < 1.05 Model is likely to be accurate.
+> 0.90 and < 1.10 Model is usable for most purposes.
+> 0.80 and < 1.20 Model may be useful, but can be improved.
+< 0.80 or > 1.20 Model is questionable and should be refined.
+```
+Tip: Changing the auto-segmentation may help (-aX)
 ### The plot of directivity (raw gain), net gain and SWR:
-![](https://i.imgur.com/be50iO9.png)
+![](https://i.imgur.com/vfGkbqy.png)
 
 ### The radiation pattern:
-![](https://i.imgur.com/RP9scvH.png)
+![](https://i.imgur.com/GESea3V.png)
 
 
