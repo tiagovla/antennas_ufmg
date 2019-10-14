@@ -1,0 +1,29 @@
+CM Example 1 :	Dipole in free space 	
+CM See GetStarted.txt
+CM 
+CM 
+CM 
+CM 
+CE
+SY freq = 300	'Frequency
+SY c = 299792458	'Speed of Light
+SY lambda = c/freq/1e6	'Wave Length
+SY seg = 21	'Number of Segments (odd)
+SY radius = 1e-03*lambda	'Radius
+SY dip_length = lambda/2	'Dipolo length
+SY d = 0.065*lambda
+SY tl_length = 0.2069
+SY CX = -269.7
+GW	1	20	0	0	-dip_length /2	0	0	0	radius	'Wire 1
+GW	2	10	0	0	0	0	0	tl_length	radius
+GW	3	10	0	0	tl_length	0	0	dip_length/2	radius
+GW	4	1	0	0	0	d	0	0	radius
+GW	5	10	d	0	0	d	0	tl_length	radius
+GW	6	1	d	0	tl_length	0	0	tl_length	radius
+GE	0
+LD	4	4	1	1	0	CX
+GN	-1
+EK
+EX	0	5	1	0	1	0	0	'Voltage source (1+j0) at wire 1 segment 5.
+FR	0	0	0	0	freq	0
+EN
