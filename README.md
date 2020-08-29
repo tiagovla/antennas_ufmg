@@ -22,7 +22,7 @@ Usually, the [4NEC2](https://www.qsl.net/4nec2/) can be used to simulate antenna
 * Numpy: https://numpy.org/ [`pip3 install numpy`]
 * Matplotlib: https://matplotlib.org/ [`pip3 install matplotlib`]
 
-## Otimizer using python:
+## Optimizer using python:
 http://clients.teksavvy.com/~nickm/scripts.html
 
 
